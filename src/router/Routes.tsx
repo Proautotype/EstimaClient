@@ -1,20 +1,12 @@
 import React from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import Home from '../views/Home';
+import AuthView from '../views/Auth/AuthView';
+import Home from '../views/Home/Home';
 
 export default createBrowserRouter(
   createRoutesFromElements(
-    <Route
-      path="/"
-      element={<Home/>}
-      loader={async ({ params }) => {
-        console.log("loader")
-        return "loader"
-      }}
-      action={async ({ request }) => {
-        // return updateFakeTeam(await request.formData());
-      }}
-    // errorElement={<ErrorBoundary />}
-    />
+    <Route  path="/" element={<Home/>}>
+       <Route path='auth' element={<AuthView/>}/>   
+    </Route>
   )
 );

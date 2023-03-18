@@ -8,9 +8,13 @@ const NavContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    border: 1px solid ${(props)=>props.theme.colors.text};
-    border-top: none ;
+    margin-bottom: 20px;
+    border: none ;
+    border-bottom: 2px solid ${(props)=>props.theme.colors.text};
     margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+
+    
 `
 
 export default NavContainer;

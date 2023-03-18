@@ -8,10 +8,13 @@ const themeSlice = createSlice({
     initialState,
     reducers: {
         changeTheme(state) {
-            if(state.id){
-                state = {...state,...lightTheme}
-            }else{
-                state = {...state,...darkTheme}
+            if (state.id === 0) {
+                state.id = lightTheme.id;
+                state.colors = { ...lightTheme.colors };
+            }
+            else {
+                state.id = darkTheme.id;
+                state.colors = { ...darkTheme.colors };
             }
         }
     }

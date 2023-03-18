@@ -57,11 +57,11 @@
         </style>
     </defs>
 
-    <rect class="e-bar" x="0.5" y="110.63" width="151" height="45" rx="13.5" fill="#7524FA"
+    <rect class="e-bar" x="0.5" y="110.63" width="151" height="45" rx="13.5" fill="#da1b60"
         stroke="black" />
-    <rect class="e-bar --i:2" x="0.5" y="55.5" width="85" height="45" rx="14.5" fill="#7524FA"
+    <rect class="e-bar --i:2" x="0.5" y="55.5" width="85" height="45" rx="14.5" fill="#da1b60"
         stroke="black" />
-    <rect class="e-bar --i:3" x="0.5" y="0.5" width="151" height="45" rx="14.5" fill="#7524FA"
+    <rect class="e-bar --i:3" x="0.5" y="0.5" width="151" height="45" rx="14.5" fill="#da1b60"
         stroke="black" />
 
     <rect class="chart-bar " x="40.8146" y="79.2083" width="6.01545" height="13.2917" rx="2.5" fill="#212121"
@@ -72,11 +72,11 @@
     <rect class="chart-bar " x="11.5" y="73.375" width="6.01545" height="19.125" rx="2.5" fill="#212121" stroke="black" />
 
     <rect class="m" x="148.038" y="59.5" width="42" height="15" rx="6.5"
-        transform="rotate(90 148.038 59.5)" fill="#ffffff" stroke="black" />
+        transform="rotate(90 148.038 59.5)" fill="#ff8a00" stroke="black" />
     <rect class="m" x="127.5" y="59.5" width="28" height="15" rx="6.5" transform="rotate(90 127.5 59.5)"
-        fill="#ffffff" stroke="black" />
+        fill="#ff8a00" stroke="black" />
     <rect class="m" x="106.8" y="59.5" width="42" height="15" rx="6.5" transform="rotate(90 106.8 59.5)"
-        fill="#ffffff" stroke="black" />
+        fill="#ff8a00" stroke="black" />
     <defs>
         <linearGradient class="paint0" id="paint0_linear_2_2" x1="76" y1="110.13" x2="76" y2="159"
             gradientUnits="userSpaceOnUse">
