@@ -29,16 +29,15 @@ const StepperForm = ({ entries, segment }: stepProps) => {
     const moveSegment = () => {
         //before movement compare right to length
         //to see if right is on the boundary
-        let isb = entries.length % right;
-        console.log(isb)
-        if (isb > 0 || segment === 1) {          
-            if (right < entries.length) { 
-                setLeft((prev) => prev + segment);
-                setRight((prev) => (prev) + segment) 
-            }
+        console.log(entries.length, right)
+        if (right < entries.length) { 
+            setLeft((prev) => prev + segment);
+            setRight((prev) => (prev) + segment) 
         }
     }
     const moveBackSegment = () => {
+        //before movement check if left is greater
+        //
         if (left > 0) { 
             setLeft((prev) => prev - segment);
             setRight((prev) => (prev) - segment) 
