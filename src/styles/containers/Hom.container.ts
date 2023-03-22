@@ -14,8 +14,10 @@ const HomeStyledContainer = styled.div`
     align-items: center;
     flex-direction : column;
     transition: all 0.2s ease-in-out;
-    ${Marquee}{
-        
+    @media (max-width: 500px) {
+        ${Marquee}{
+            display: none;
+        }
     }
 `
 

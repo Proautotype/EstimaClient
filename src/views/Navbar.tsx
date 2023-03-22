@@ -7,6 +7,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import { changeTheme as changeAppTheme } from '../statemanager/themeFeature/themeSlice';
 import { useNavigate } from 'react-router-dom';
+import EstimaLogo from '../styles/containers/EstimaLogo';
 
 const Navbar = () => {
     const appthemeId = useSelector((state: ReduxRootState) => state.theme.id);
@@ -23,7 +24,10 @@ const Navbar = () => {
 
     return (
         <NavContainer>
-            <img src='EstimaLogo.svg' alt='logo' height={40} style={{cursor:"pointer"}} onClick={()=>{nav()}} />
+            {/* <img src={'EstimaLogo.svg'} alt='logo' height={40} style={{cursor:"pointer"}} onClick={()=>{nav()}} /> */}
+            <div style={{cursor:"pointer"}} onClick={()=>{nav()}}>
+                <EstimaLogo/>
+            </div>
             <StyledButton onClick={changeTheme}>
                 {appthemeId === 0 ? <WbSunnyIcon /> : <DarkModeIcon />}
             </StyledButton>
