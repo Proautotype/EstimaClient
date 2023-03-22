@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from '@material-ui/icons';
 import { nanoid } from '@reduxjs/toolkit';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, ChangeEvent } from 'react'
 import { FormGroup, FormLabel, FormControl } from 'react-bootstrap'
 import styled from 'styled-components';
 import { stepperFromEntry } from '../@types/JSXProps.types';
@@ -14,8 +14,13 @@ const StepperForm = ({ entries, segment }: stepProps) => {
     const [stepperEntries, setStepperEntries] = useState<stepperFromEntry[]>(entries);
     const [left, setLeft] = useState<number>(0)
     const [right, setRight] = useState<number>(segment)
-    const propMapper = ({ id, title, blurCheck, onBlur, type }: stepperFromEntry, idx: number) => {
-        // console.log(idx)
+    const propMapper = ({ id, title, blurCheck, onBlur, type, value, onChange }: stepperFromEntry, idx: number, orignalArr:stepperFromEntry[]) => {
+        
+        function _onChange(e:ChangeEvent){
+            const entry = entries.find((e)=>e.id === id)
+            console.log(JSON.stringify(entry))
+        }
+
         return <CustomFormGroup
             id={id}
             title={title}
@@ -23,6 +28,8 @@ const StepperForm = ({ entries, segment }: stepProps) => {
             onBlur={onBlur}
             key={nanoid()}
             type={type}
+            value={value}
+            onChange={_onChange}
         />
     }
 
@@ -81,11 +88,10 @@ const StyledUL = styled.ul`
   padding-left:20px;
   padding-bottom:20px;
 `
-const CustomFormGroup = ({ id, title, blurCheck, onBlur, type }: stepperFromEntry) => {
+const CustomFormGroup = ({ id, title, blurCheck, onBlur, type, value, onChange }: stepperFromEntry) => {
     return <FormGroup className='formGroup'>
         <FormLabel htmlFor={id} title={title}>{title}</FormLabel>
-        <FormControl id={id} title={title} type={type} />
-
+        <FormControl id={id} title={title} type={type} value={value} onChange={(e)=>onChange ? onChange(e) : ()=>{}}/>
         <StyledUL>
             <li>Hey, screech</li>
         </StyledUL>

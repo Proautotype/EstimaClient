@@ -16,41 +16,50 @@ const AuthView = () => {
       {
         id: "userName",
         title:"Username",
-        type:"text"
+        type:"text",
+        value:"",
       },
       {
         id: "firstName",
         title:"First Name",
-        type:"text"      
+        type:"text",
+        value:"",      
       },
       {
         id: "lastName",
         title:"Last Name",
-        type:"text"
+        type:"text",
+        value:"",
       },{
         id: "email",
         title:"Email",
-        type:"text"
+        type:"text",
+        value:"",
       },{
         id: "password",
         title:"Password",
-        type:"password"
+        type:"password",
+        value:"",
       },{
         id: "postalAddress",
         title:"Postal Address",
-        type:"text"
+        type:"text",
+        value:""
       },{
         id: "Address",
         title:"Address",
-        type:"text"
+        type:"text",
+        value:""
       },{
         id: "bankNumber",
         title:"Bank Number",
-        type:"text"
+        type:"text",
+        value:""
       },{
         id: "jobTitle",
         title:"Job Title",
-        type:"text"
+        type:"text",
+        value:""
       }
     ])
   }, [setStepperEntries])
